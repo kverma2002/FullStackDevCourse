@@ -5,9 +5,7 @@ const Content = (props) => {
     return (
         <>
          <div>
-            <Part info={props.parts[0]} />
-            <Part info={props.parts[1]} />
-            <Part info={props.parts[2]} />
+            {props.parts.map(part => <Part info={part} key={part.id}/>)}
         </div>
             <Total parts={props.parts}/>
         </>
