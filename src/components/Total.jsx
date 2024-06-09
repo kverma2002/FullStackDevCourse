@@ -1,7 +1,10 @@
-const Total = (props) => {
+const Total = ({parts}) => {
+    const total = parts.reduce((s, p) => {
+        // console.log('what is happening', s, p)
+        return s + p.exercises}, 0)
     return (
       <div>
-        <p>Number of exercises {props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises}</p>
+        <p><b>total of {total} exercises</b></p>
       </div>
     )
   }
